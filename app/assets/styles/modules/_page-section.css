@@ -10,4 +10,10 @@
         background-color: $mainBlue;
         color: #FFF;
     }
+
+    &--events {
+        background: url('assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;
+
+    }
 }
