@@ -1,0 +1,32 @@
+/*Make this a design pattern as will be used on other pages on the site*/
+.primary-nav {
+
+    /*We make a specific class for this as the basic class should be reuable and flexible in style*/
+    &--pull-right{
+        float: right;
+    }
+
+    /*Any ul that exist in a primary nav*/
+    ul {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+    }
+
+    /*remove the bullets, float to the left*/
+    li {
+        list-style: none;
+        float: left;
+        padding-right: 20px;
+    }
+
+        /*Remove the underline and make white*/
+    a{
+        color: #FFF;
+        font-weight:300;
+        text-decoration: none;
+        display: block;
+        padding: 12px 0;
+    }
+    
+}
