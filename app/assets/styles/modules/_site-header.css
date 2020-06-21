@@ -4,6 +4,11 @@ padding: 10px 0;
 position: absolute; /*By default absolute will squueze everything together. If we want to take the full top we need to specify width*/
 width: 100%;
 z-index:2;
+transition: background-color .3s ease-out;
+
+&--is-expanded {
+    background-color: rgba($mainBlue, .55);
+}
 
     /*We only want the background on larger screens*/
     @mixin atMedium {
@@ -11,7 +16,10 @@ z-index:2;
     }
 
    &__btn-container {
+
+    @mixin atMedium {
        float: right; /* Positions the button to the right of the header*/
+    }
    } 
 
     /*Removes the logo from the flow of the header so the header box doesn't expand to the size of the logo. Moves to the centre for small screens and keeps left on larger screens*/
@@ -33,24 +41,90 @@ z-index:2;
 
    &__menu-icon {
        width: 20px;
-       height: 20px;
-       background-color: #FFF;
+       height: 19px;
        position: absolute;
+       z-index: 10;
        top: 10px;
        right: 10px;
+
+       &::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 20px;
+           height: 3px;
+           background-color: #FFF;
+           transform-origin: 0 0;
+           transition: transform .3s ease-out;
+       }
+
+       &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: #FFF;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+    }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: #FFF;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+    }
 
        @mixin atMedium {
            display: none;
        }
    }
 
+   &__menu-icon--close-x {
+       &::before {
+           transform: rotate(45deg) scaleX(1.25);
+       }
+
+       .site-header__menu-icon__middle {
+           opacity: 0;
+           transform: scaleX(0);
+       }
+
+       &::after {
+           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+       }
+   }
+
 
    /*Hide on small screens and show on medium screens and above */
    &__menu-content {
-       display:none;
+       opacity: 0;
+       transform: scale(1.2);
+       transition: all .3s ease-out;
+       position: relative;
+       z-index: -10;
+       padding-top: 90px; /* for mobiles pull the top menu down under the logo*/
+       text-align: center;
 
        @mixin atMedium {
-        display: block;
+        opacity: 1;
+        z-index:1 ;
+        padding-top: 0;
+        transform: scale(1);
+       }
+
+       /*Javascript creates this with classList on the toggle*/
+       &--is-visible {
+           opacity: 1;
+           z-index: 1;
+           transform: scale(1);
        }
    }
 

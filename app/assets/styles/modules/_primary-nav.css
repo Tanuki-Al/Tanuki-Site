@@ -1,9 +1,17 @@
 /*Make this a design pattern as will be used on other pages on the site*/
 .primary-nav {
+    padding-top: 10px;
+
+    @media atMedium{
+        padding-top: 0;
+    }
 
     /*We make a specific class for this as the basic class should be reuable and flexible in style*/
     &--pull-right{
+        
+        @mixin atMedium {
         float: right;
+        }
     }
 
     /*Any ul that exist in a primary nav*/
@@ -15,10 +23,26 @@
 
     /*remove the bullets, float to the left*/
     li {
+
         list-style: none;
+        display: inline-block;
+        padding-right: 10px;
+
+        @mixin atMedium {
         float: left;
+        display: block;
         padding-right: 20px;
+        }
     }
+
+    li:last-child {
+        padding-right: 0;
+
+        @mixin atMedium {
+            padding-right: 20px;
+        }
+    }
+
 
         /*Remove the underline and make white*/
     a{
@@ -26,7 +50,16 @@
         font-weight:300;
         text-decoration: none;
         display: block;
-        padding: 12px 0;
+        padding: 5px 8px;
+        font-size: .8rem;
+        background-color: rgba($mainBlue, .5);
+       
+
+        @mixin atMedium {
+            font-size: 1rem;;
+            padding: 12px 0;
+            background-color: transparent;
+        }
     }
     
 }
