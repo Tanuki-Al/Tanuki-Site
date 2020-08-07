@@ -12,7 +12,12 @@ transition: background-color .3s ease-out;
 
     /*We only want the background on larger screens*/
     @mixin atMedium {
+        position: fixed; /*locks element to top of screen */
         background-color: rgba($mainBlue, .5); /* we use rgba to make it transparent. To use $ variables we need to install a post css plugin - postcss-hexrgba*/
+
+        &--dark {
+            background-color: rgba(23, 51, 72, .85);
+        }
     }
 
    &__btn-container {
@@ -27,14 +32,22 @@ transition: background-color .3s ease-out;
        position: absolute;
        top: 0;
        background-color: $mainBlue;
-       padding: 13px 22px;
+       //padding: 13px 22px;
        left: 50%;
-       transform: translateX(-50%);
+       transition: transform .3s ease-out;
+       transform: translateX(-50%) scale (.8);
+       transform-origin: 50% 0;
+       padding: 25px 36px;
 
        @mixin atMedium {
            left: auto;
            transform: translateX(0);
-           padding: 25px 36px;
+           
+
+
+           .site-header--dark & {
+               transform: scale(.55);
+           }
         }
 
    }
