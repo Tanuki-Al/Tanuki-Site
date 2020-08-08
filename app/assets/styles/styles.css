@@ -16,3 +16,5 @@
 @import "modules/_reveal-item";
 @import "base/_global";
 @import "normalize.css";
+@import "modules/_modal";
+@import "modules/_social-icons";
