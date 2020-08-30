@@ -29,11 +29,16 @@
         color: #FFF;
     }
 
+    &--husk {
+        background-color: $mainHusk;
+        color: #FFF;
+    }
+
     &--events {
         background-color:#e0e6ef;
         
         @mixin atLarge {
-            background: url('assets/images/tanuki_1920.jpg') top center no-repeat;
+            background: url('assets/images/events-splash.jpg') top center no-repeat;
             background-size: cover;
         }
 
