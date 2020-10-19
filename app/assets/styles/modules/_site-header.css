@@ -7,16 +7,16 @@ z-index:2;
 transition: background-color .3s ease-out;
 
 &--is-expanded {
-    background-color: rgba($mainBlue, .85);
+    background-color: rgba($mainCream, .85);
 }
 
     /*We only want the background on larger screens*/
     @mixin atMedium {
         position: fixed; /*locks element to top of screen */
-        background-color: rgba($mainBlue, .5); /* we use rgba to make it transparent. To use $ variables we need to install a post css plugin - postcss-hexrgba*/
+        background-color: rgba($mainCream, .5); /* we use rgba to make it transparent. To use $ variables we need to install a post css plugin - postcss-hexrgba*/
 
         &--dark {
-            background-color: rgba(23, 51, 72, .85);
+            background-color: rgba(223, 213, 195, .85);
         }
     }
 
@@ -31,7 +31,7 @@ transition: background-color .3s ease-out;
    &__logo {
        position: absolute;
        top: 0;
-       background-color: $mainBlue;
+       background-color: $mainCream;
        left: 50%;
        transition: transform .3s ease-out;
        transform:  translateX(-50%) scale(.8);
@@ -72,7 +72,7 @@ transition: background-color .3s ease-out;
            left: 0;
            width: 20px;
            height: 3px;
-           background-color: #FFF;
+           background-color: #000;
            transform-origin: 0 0;
            transition: transform .3s ease-out;
        }
@@ -83,7 +83,7 @@ transition: background-color .3s ease-out;
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: #FFF;
+            background-color: #000;
             transition: all .3s ease-out;
             transform-origin: 0 50%;
     }
@@ -95,7 +95,7 @@ transition: background-color .3s ease-out;
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: #FFF;
+            background-color: #000;
             transform-origin: 0 100%;
             transition: transform .3s ease-out;
     }

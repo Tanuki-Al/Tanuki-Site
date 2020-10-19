@@ -24,18 +24,18 @@
     }
     
 
-    &--blue {
-        background-color: $mainBlue;
-        color: #FFF;
+    &--dark {
+        background-color: $mainDark;
+        color: $mainCream;
     }
 
-    &--husk {
-        background-color: $mainHusk;
-        color: #FFF;
+    &--light {
+        background-color: $mainCream;
+        color: $mainDark;
     }
 
     &--events {
-        background-color:#e0e6ef;
+        background-color:$mainCream;
         
         @mixin atLarge {
             background: url('assets/images/events-splash.jpg') top center no-repeat;

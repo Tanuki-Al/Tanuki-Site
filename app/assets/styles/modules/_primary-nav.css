@@ -6,7 +6,7 @@
         padding-top: 0;
     }
 
-    /*We make a specific class for this as the basic class should be reuable and flexible in style*/
+    /*We make a specific class for this as the basic class should be reusable and flexible in style*/
     &--pull-right{
         
         @mixin atMedium {
@@ -46,13 +46,13 @@
 
         /*Remove the underline and make white*/
     a{
-        color: #FFF;
+        color: $mainDark;
         font-weight:300;
         text-decoration: none;
         display: block;
         padding: 5px 8px;
         font-size: .8rem;
-        background-color: rgba($mainBlue, .5);
+        background-color: rgba($mainDark, .5);
        
 
         @mixin atMedium {
@@ -61,7 +61,7 @@
             background-color: transparent;
 
             &.is-current-link {
-                color: #fabb69;
+                color: #fa7a69;
             }
         }
     }
