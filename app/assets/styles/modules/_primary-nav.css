@@ -9,60 +9,30 @@
     /*We make a specific class for this as the basic class should be reusable and flexible in style*/
     &--pull-right{
         
-        @mixin atMedium {
-        float: right;
-        }
+    @mixin atMedium {
+    float: right;
     }
+}
 
-    /*Any ul that exist in a primary nav*/
-    ul {
-        margin:0;
-        padding:0;
-       @mixin clearfix;
+/*Any ul that exist in a primary nav*/
+ul {
+    margin:0;
+    padding:0;
+
+}
+
+/*remove the bullets, float to the left*/
+li {
+
+    list-style: none;
+    display: inline-block;
+    padding-right: 7px;
+
+    @mixin atMedium {
+    float: left;
+    display: block;
+    padding-right: 20px;
     }
+}
 
-    /*remove the bullets, float to the left*/
-    li {
-
-        list-style: none;
-        display: inline-block;
-        padding-right: 7px;
-
-        @mixin atMedium {
-        float: left;
-        display: block;
-        padding-right: 20px;
-        }
-    }
-
-    li:last-child {
-        padding-right: 0;
-
-        @mixin atMedium {
-            padding-right: 20px;
-        }
-    }
-
-        /*Remove the underline and make white*/
-    a {
-        color: $mainDark;
-        font-weight:300;
-        text-decoration: none;
-        display: block;
-        padding: 5px 8px;
-        font-size: .8rem;
-        background-color: rgba($mainDark, .5);
-       
-
-        @mixin atMedium {
-            font-size: 1rem;;
-            padding: 12px 0;
-            background-color: transparent;
-
-            &.is-current-link {
-                color: #fa7a69;
-            }
-        }
-    }
-    
 }
