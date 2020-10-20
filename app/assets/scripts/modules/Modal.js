@@ -42,7 +42,7 @@ class Modal {
     <div class="modal__inner">
       <h2 class="section-title section-title--dark section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
       <div class="wrapper wrapper--narrow">
-        <p class="modal__description">We will soon be updating the website to show our full library and stock and allow you to buy and pick-up games online. We will also be adding more event and community information. Until then, connect with us on any of the platforms below!</p>
+        <p class="modal__description">We will soon be updating the website to show our full library and stock and allow you to buy online and pick-up games instore. We will also be adding more event and community information. Until then, connect with us on any of the platforms below!</p>
       </div>
 
       <div class="social-icons">

@@ -16,9 +16,9 @@
 
     /*Any ul that exist in a primary nav*/
     ul {
-        margin: 0;
-        padding: 0;
-        @mixin clearfix;
+        margin:0;
+        padding:0;
+       @mixin clearfix;
     }
 
     /*remove the bullets, float to the left*/
@@ -43,9 +43,8 @@
         }
     }
 
-
         /*Remove the underline and make white*/
-    a{
+    a {
         color: $mainDark;
         font-weight:300;
         text-decoration: none;
